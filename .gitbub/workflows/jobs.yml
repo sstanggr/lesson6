@@ -28,11 +28,11 @@ jobs:
   
   build-job:
     outputs:
-      build-ouyput: ${{ steps.buildStep.outputs.buildOutput }}
+      build-ouyput: ${{ steps.buildStep.outputs.buildOut }}
    name: build job
    runs-on: ubuntu-latest
    container:
-     image: oven/bun:slide
+     image: oven/bun:slim
   steps:
     - name: define output variable
       id: buildStep
