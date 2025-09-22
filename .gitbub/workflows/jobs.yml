@@ -33,9 +33,9 @@ jobs:
    runs-on: ubuntu-latest
    container:
      image: oven/bun:slim
-  steps:
-    - name: define output variable
-      id: buildStep
-      run: |
-        bunver=$(bun --version)
-        echo "buildOut=$bunver" >> "$GITHUB_OUTPUT"
+    steps:
+      - name: define output variable
+        id: buildStep
+        run: |
+          bunver=$(bun --version)
+          echo "buildOut=$bunver" >> "$GITHUB_OUTPUT"
