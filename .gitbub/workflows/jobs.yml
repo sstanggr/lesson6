@@ -23,18 +23,18 @@ jobs:
     runs-on: unbuntu-latest
     needs: build-job
     steps:
-     - name: test build outpu
-       run: echo ${{ needs.build.jobs.outputs.build.output }}
+     - name: test build output
+       run: echo ${{ needs.build.job.outputs.build.output }}
   
   build-job:
     outputs:
       build-ouyput: ${{ steps.buildStep.outputs.buildOutput }}
-   name: buil job
+   name: build job
    runs-on: ubuntu-latest
    container:
      image: oven/bun:slide
   steps:
-    - name: define outpu variable
+    - name: define output variable
       id: buildStep
       run: |
         bunver=$(bun --version)
